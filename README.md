@@ -19,16 +19,21 @@ This is a simplified version of a homework assignment, showcasing basic skills i
   **We will use:**
   
 1. **Flash Drive Path:**
+ 
    `/media/user/SMARTBUY`
+   
    `SMARTBUY` - is the name of my flash drive.
    
-3. **Files Folder:**
+2. **Files Folder:**
   `test_files_generation`
+
    This folder will be created on the flash drive.
+   
    The script will create files for deletion in this folder, and another script will delete them. All operations will be scheduled using `cron`.
    
-5. **File Name Prefix:**
+3. **File Name Prefix:**
    `dummy_file_`
+   
    This will be the naming pattern for the files.
 
 
@@ -184,16 +189,20 @@ crontab -e
   
 1. **Путь к флэшке:**
    `/media/user/SMARTBUY`
+   
    SMARTBUY - имя моей флэшки.
    
-3. **Папка для файлов:**
+2. **Папка для файлов:**
   `test_files_generation`
+
    Эта папка будет создана на этой флэшке.
+   
    В ней скрипт будет создавать файлы для удаления. А другой скрипт юудет их удалять. И всё по расписанию в `cron`.
 
-5. **Префикс имени файла:**
-   `dummy_file_`
-   Шаблон названия имён файлов.
+3. **Префикс имени файла:**
+   
+   `dummy_file_`    
+   - Шаблон названия имён файлов.
 
 
   **Скрипт Bash #1.**

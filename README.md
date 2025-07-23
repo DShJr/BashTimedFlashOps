@@ -80,13 +80,15 @@ done
 echo "Finished creating files."
 
 
+
   **Bash Script #2: Files Deleted**
 
 **Purpose:** File deletion only.
-**Script Name:** simple_cleanup_files.sh
-**Script Description:** This script will simply delete all files with the dummy_file_ prefix from the specified folder, without checking free space percentage.
+**Script Name:** `simple_cleanup_files.sh`
+**Script Description:** This script will simply delete all files with the `dummy_file_` prefix from the specified folder, without checking free space percentage.
 
 **Script Code:**
+
 
 ```bash
 #!/bin/bash
@@ -119,10 +121,11 @@ else
 fi
 
 
+
   **Setting Permissions for Scripts #1 and #2**
   To make the scripts executable:
-  simple_generation_files.sh
-  simple_cleanup_files.sh
+  `simple_generation_files.sh`
+  `simple_cleanup_files.sh`
 
 ```bash
 chmod +x simple_generation_files.sh

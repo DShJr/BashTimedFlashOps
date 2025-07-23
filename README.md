@@ -17,6 +17,7 @@ This is a simplified version of a homework assignment, showcasing basic skills i
   This section details the setup and scripts used for the assignment.
 
   **We will use:**
+  
 1. **Flash Drive Path:**
    `/media/user/SMARTBUY`
    `SMARTBUY` - is the name of my flash drive.
@@ -140,24 +141,29 @@ chmod +x simple_cleanup_files.sh
 To automate the execution of these scripts:
 
 1. **Open the cron editor:**
-   crontab -e
+```bash
+crontab -e
+```
    
-2. **Add the tasks to `crontab`:**
+3. **Add the tasks to `crontab`:**
 
 2.1 **For the file creation script** (simple_generation_files.sh)
 
    **Task:** It should run at the beginning of every hour.
    
    **Execution:**
-   0**** /home/user/..../simple_generation_files.sh >> /tmp/generate_log.txt 2>&1
+```bash
+0**** /home/user/..../simple_generation_files.sh >> /tmp/generate_log.txt 2>&1
+```
 
 2.2 **For the file cleanup script** (simple_cleanup_files.sh)
 
    **Task:** It should run 10 minutes past the beginning of every hour.
    
    **Execution:**
-   10**** /home/user/..../simple_cleanup_files.sh >> /tmp/generate_log.txt 2>&1
-
+```bash
+10**** /home/user/..../simple_cleanup_files.sh >> /tmp/generate_log.txt 2>&1
+```
 
 ---
 ## RU
@@ -175,14 +181,17 @@ To automate the execution of these scripts:
 ### Процесс выполнение задания
 
   **Будем использовать:**
+  
 1. **Путь к флэшке:**
    `/media/user/SMARTBUY`
    SMARTBUY - имя моей флэшки.
-2. **Папка для файлов:**
+   
+3. **Папка для файлов:**
   `test_files_generation`
    Эта папка будет создана на этой флэшке.
    В ней скрипт будет создавать файлы для удаления. А другой скрипт юудет их удалять. И всё по расписанию в `cron`.
-4. **Префикс имени файла:**
+
+5. **Префикс имени файла:**
    `dummy_file_`
    Шаблон названия имён файлов.
 
@@ -190,7 +199,9 @@ To automate the execution of these scripts:
   **Скрипт Bash #1.**
 
 **Назначение:** Только создание файлов.
+
 **Имя скрипта:** `simple_generation_files.sh`
+
 **Описание скрипта:** Он будет просто создавать определённое количество файлов (в нашем случае, 100), каждый размером в 1МБ, не проверяя процент заполнения диска.
 
 **Код скрипта:**
@@ -241,7 +252,9 @@ echo "Завершено создание файлов."
   **Скрипт Bash #2.**
 
 **Назначение:** Только для удаления файлов.
+
 **Имя скрипта:** `simple_cleanup_files.sh`
+
 **Описание скрипта:** Он будет просто удалять все файлы с префиксом `dummy_file_` из указанной папки, не проверяя процент свободного места.
 
 **Код скрипта:**
@@ -289,16 +302,26 @@ chmod +x simple_cleanup_files.sh
   **Настройка Автоматического запуска этих скриптов по расписанию с помощью `cron`**
 
 1. **Открываем редактор `cron`**
-   crontab -e
+```bash
+crontab -e
+```
 
 2. **Добавим задачи в `crontab`**
 
 2.1 **Для скрипта создания файлов** (simple_generation_files.sh)
+
    **Задача:** Он должен запускаться в начале каждого часа.
+   
    **Выполнение:**
-   0**** /home/user/..../simple_generation_files.sh >> /tmp/generate_log.txt 2>&1
+```bash
+0**** /home/user/..../simple_generation_files.sh >> /tmp/generate_log.txt 2>&1
+```
 
 2.2 **Для скрипта удаления файлов (simple_cleanup_files.sh)
-   **Задача:** Он должен запускаться каждые 10 минут каждого часа.
+
+  **Задача:** Он должен запускаться каждые 10 минут каждого часа.
+  
   **Выполнение:**
-   10**** /home/user/..../simple_cleanup_files.sh >> /tmp/generate_log.txt 2>&1
+```bash
+10**** /home/user/..../simple_cleanup_files.sh >> /tmp/generate_log.txt 2>&1
+```

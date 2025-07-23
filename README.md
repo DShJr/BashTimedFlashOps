@@ -190,7 +190,7 @@ crontab -e
 1. **Путь к флэшке:**
    `/media/user/SMARTBUY`
    
-   SMARTBUY - имя моей флэшки.
+  `SMARTBUY` - имя моей флэшки.
    
 2. **Папка для файлов:**
   `test_files_generation`

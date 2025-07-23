@@ -78,8 +78,7 @@ do
 done
 
 echo "Finished creating files."
-
-
+```
 
   **Bash Script #2: Files Deleted**
 
@@ -88,7 +87,6 @@ echo "Finished creating files."
 **Script Description:** This script will simply delete all files with the `dummy_file_` prefix from the specified folder, without checking free space percentage.
 
 **Script Code:**
-
 
 ```bash
 #!/bin/bash
@@ -119,8 +117,7 @@ then
 else
   echo "Errors occured during file deletion from: $full_path_to_folder"
 fi
-
-
+```
 
   **Setting Permissions for Scripts #1 and #2**
   To make the scripts executable:
@@ -224,7 +221,7 @@ do
 done
 
 echo "Завершено создание файлов."
-
+```
 
   **Скрипт Bash #2.**
 
@@ -263,7 +260,7 @@ then
 else
   echo "Произошли ошибки во время удаления файлов из: $full_path_to_folder"
 fi
-
+```
 
   **Назначим права для скриптов #1 и #2**
   `simple_generation_files.sh`

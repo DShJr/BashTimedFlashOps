@@ -20,11 +20,13 @@ This is a simplified version of a homework assignment, showcasing basic skills i
 1. **Flash Drive Path:**
    `/media/user/SMARTBUY`
    `SMARTBUY` - is the name of my flash drive.
-2. **Files Folder:**
+   
+3. **Files Folder:**
   `test_files_generation`
    This folder will be created on the flash drive.
    The script will create files for deletion in this folder, and another script will delete them. All operations will be scheduled using `cron`.
-4. **File Name Prefix:**
+   
+5. **File Name Prefix:**
    `dummy_file_`
    This will be the naming pattern for the files.
 
@@ -32,7 +34,9 @@ This is a simplified version of a homework assignment, showcasing basic skills i
   **Bash Script #1: File Generation**
 
 **Purpose:** File creation only.
+
 **Script Name:** `simple_generation_files.sh`
+
 **Script Description:** This script will simply create a specified number of files (in this case, 100), each sized at 1MB, without checking disk fill percentage.
 
 **Script Code:**
@@ -83,7 +87,9 @@ echo "Finished creating files."
   **Bash Script #2: Files Deleted**
 
 **Purpose:** File deletion only.
+
 **Script Name:** `simple_cleanup_files.sh`
+
 **Script Description:** This script will simply delete all files with the `dummy_file_` prefix from the specified folder, without checking free space percentage.
 
 **Script Code:**
@@ -139,12 +145,16 @@ To automate the execution of these scripts:
 2. **Add the tasks to `crontab`:**
 
 2.1 **For the file creation script** (simple_generation_files.sh)
+
    **Task:** It should run at the beginning of every hour.
+   
    **Execution:**
    0**** /home/user/..../simple_generation_files.sh >> /tmp/generate_log.txt 2>&1
 
 2.2 **For the file cleanup script** (simple_cleanup_files.sh)
+
    **Task:** It should run 10 minutes past the beginning of every hour.
+   
    **Execution:**
    10**** /home/user/..../simple_cleanup_files.sh >> /tmp/generate_log.txt 2>&1
 

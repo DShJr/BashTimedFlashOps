@@ -326,7 +326,7 @@ crontab -e
 0**** /home/user/..../simple_generation_files.sh >> /tmp/generate_log.txt 2>&1
 ```
 
-2.2 **Для скрипта удаления файлов (simple_cleanup_files.sh)
+2.2 **Для скрипта удаления файлов** (simple_cleanup_files.sh)
 
   **Задача:** Он должен запускаться каждые 10 минут каждого часа.
   

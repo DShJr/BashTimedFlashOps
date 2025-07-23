@@ -128,17 +128,21 @@ fi
 ```bash
 chmod +x simple_generation_files.sh
 chmod +x simple_cleanup_files.sh
+```
 
-
-  **Scheduling Automatic Script Execution with Cron**
+  **Scheduling Automatic Script Execution with `Cron`**
 To automate the execution of these scripts:
+
 1. **Open the cron editor:**
    crontab -e
-2. **Add the tasks to crontab:**
+   
+2. **Add the tasks to `crontab`:**
+
 2.1 **For the file creation script** (simple_generation_files.sh)
    **Task:** It should run at the beginning of every hour.
    **Execution:**
    0**** /home/user/..../simple_generation_files.sh >> /tmp/generate_log.txt 2>&1
+
 2.2 **For the file cleanup script** (simple_cleanup_files.sh)
    **Task:** It should run 10 minutes past the beginning of every hour.
    **Execution:**
@@ -228,7 +232,7 @@ echo "Завершено создание файлов."
 
 **Назначение:** Только для удаления файлов.
 **Имя скрипта:** `simple_cleanup_files.sh`
-**Описание скрипта:** Он будет просто удалять все файлы с префиксом dummy_file_ из указанной папки, не проверяя процент свободного места.
+**Описание скрипта:** Он будет просто удалять все файлы с префиксом `dummy_file_` из указанной папки, не проверяя процент свободного места.
 
 **Код скрипта:**
 
@@ -270,7 +274,7 @@ fi
 ```bash
 chmod +x simple_generation_files.sh
 chmod +x simple_cleanup_files.sh
-
+```
 
   **Настройка Автоматического запуска этих скриптов по расписанию с помощью `cron`**
 

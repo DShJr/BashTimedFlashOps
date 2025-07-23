@@ -120,6 +120,7 @@ fi
 ```
 
   **Setting Permissions for Scripts #1 and #2**
+  
   To make the scripts executable:
   `simple_generation_files.sh`
   `simple_cleanup_files.sh`

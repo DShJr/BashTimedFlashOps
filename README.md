@@ -5,6 +5,8 @@
 ### Description
 This project features a set of **Bash scripts** designed for automated file management on a USB flash drive. The primary goal is to prevent the drive from becoming full and to streamline the process of deleting outdated files.
 
+[**Link to the second version of the Bash script**](https://github.com/DShJr/BashTimedFlashOps_v2)
+
 **The repository contains two main scripts:**
 
 * One script: simple_generate_files.sh - **creates Bash files** on the flash drive at a specified time using the **`cron` scheduler**.
@@ -175,6 +177,8 @@ crontab -e
 
 ### Описание
 Этот проект представляет собой набор Bash-скриптов для автоматического управления файлами на флешке. Основная цель — предотвратить переполнение накопителя и упростить процесс удаления устаревших файлов.
+
+[**Ссылка на вторую версию Bash-скрипта**](https://github.com/DShJr/BashTimedFlashOps_v2)
 
 **В репозитории представлены два основных скрипта:**
 
